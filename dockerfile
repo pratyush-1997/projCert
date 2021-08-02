@@ -1,4 +1,4 @@
 FROM  devopsedu/webapp
-COPY wevsite/var/www/html
-RUN docker pull devopsedu/webapp
+COPY website /var/www/html
+RUN rm -r /var/www/html/index.html
 CMD apachectl -D FOREGROUND
